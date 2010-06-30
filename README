@@ -1,0 +1,28 @@
+= Simple Kakuro helper script
+
+This is a script I wrote for myself to help me in solving Kakuro puzzles. It finds all the digit combinations with given sum, for example:
+
+  $ ruby kakuro.rb 37 6
+  Combinations:
+  [2, 5, 6, 7, 8, 9]
+  [3, 4, 6, 7, 8, 9]
+  In all:
+  [6, 7, 8, 9]
+  Never:
+  [1]
+
+It displays all of the digit combinations, then a list of digits that appear in every combination then a list of digits that never appear (these are very helpful hints when solving).
+
+If you have already determined some of the digits, you can add them as additional parameters:
+
+  $ ruby kakuro.rb 20 4 3 6
+  Combinations:
+  [2, 3, 6, 9]
+  [3, 4, 6, 7]
+  In all:
+  [3, 6]
+  Never:
+  [1, 5, 8]
+
+This lists only those 4-digit combinations with the sum of 20 that contain both 3 and 6, in this case there are only 2 such combinations (without these constraints there are 12).
+
