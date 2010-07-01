@@ -1,4 +1,4 @@
-= Simple Kakuro helper script
+= kakuro.rb - a simple Kakuro helper script
 
 This is a script I wrote for myself to help me in solving Kakuro puzzles. It finds all the digit combinations with given sum, for example:
 
@@ -26,3 +26,6 @@ If you have already determined some of the digits, you can add them as additiona
 
 This lists only those 4-digit combinations with the sum of 20 that contain both 3 and 6, in this case there are only 2 such combinations (without these constraints there are 12).
 
+= kakuro.hs
+
+Still in beta! Description coming soon! 
