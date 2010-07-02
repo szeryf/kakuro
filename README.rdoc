@@ -28,4 +28,14 @@ This lists only those 4-digit combinations with the sum of 20 that contain both 
 
 = kakuro.hs
 
-Still in beta! Description coming soon! 
+This script works a little bit differently. You give it a sum and the clues you have already gathered for each cell and it outputs all of the possible combinations for those constraints. I wrote it while simultaneously learning Haskell, so it may not be the most user friendly script ever :) 
+
+Currently there is no command line argument support, so you'll have to edit the code to provide the arguments (to be precise {it's the pk function call at the end of main function}[http://github.com/szeryf/kakuro/blob/master/kakuro.hs#L54]).
+
+The <code>pk</code> function takes two arguments: an <code>Int</code> (target sum) and a <code>String</code>, listing the clues as digit sequences separated by spaces. Use underscore if you have no clues for given cell (which ultimately means the same as <code>123456789</code>). For example:
+
+  pk 22 "2 13 _ 135 7 45"
+
+means that the sum is 22, you have already determined that there is a 2 in first cell, in the second cell there might be either 1 or 3, you have no clue about third cell and so on. 
+
+Please note that you don't specify the number of cells, it is determined by the number of clues.
